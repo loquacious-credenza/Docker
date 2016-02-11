@@ -33,6 +33,7 @@ function create(req, res){
         console.log('Error pushing trip ID into user trip array: ', err);
         res.sendStatus(500);
       } else {
+        console.log('New trip created: ', response);
         res.json(newTrip);
       }
     });

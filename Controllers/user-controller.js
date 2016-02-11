@@ -13,6 +13,7 @@ module.exports = {
 				console.log("Error finding user: ", err);
 				res.sendStatus(500);
 			} else {
+				console.log("User found: ", response);
 				res.json(response);
 			}
 		});
@@ -34,6 +35,7 @@ module.exports = {
 						console.log("Error finding trip associated with user: ", err);
 						res.sendStatus(500);
 					} else {
+			console.log("User found: ", response);
             combinedData.activeTrip = _.last(response) || null;
             res.json(combinedData);
           }
@@ -44,6 +46,7 @@ module.exports = {
             console.log("Error creating user: ", err);
             res.sendStatus(500);
           } else {
+          	console.log("User created: ", response);
             combinedData.user = response;
             combinedData.activeTrip = null;
 						res.json(combinedData);
@@ -60,6 +63,7 @@ module.exports = {
 				console.log("Error updating user contacts: ", err);
 				res.sendStatus(500);
 			} else {
+				console.log("Contact updated: ", response);
 				res.json(response);
 			}
 		});
@@ -71,6 +75,7 @@ module.exports = {
 				console.log("Error deleting user contact: ", err);
 				res.sendStatus(500);
 			} else {
+				console.log("Contact removed: ", response);
 				res.json(response);
 			}
 		});
@@ -86,6 +91,7 @@ module.exports = {
         res.sendStatus(500);
       } else {
       	if (response !== null) {
+      		console.log("User updated: ", response);
         	res.json(response[prop]);
       	} else {
       		res.sendStatus(500);

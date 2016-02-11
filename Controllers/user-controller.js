@@ -85,7 +85,11 @@ module.exports = {
         console.log("Error updating user: ", err);
         res.sendStatus(500);
       } else {
-        res.json(response.delay);
+      	if (response !== null) {
+        	res.json(response[prop]);
+      	} else {
+      		res.sendStatus(500);
+      	}
       }
     });
   }

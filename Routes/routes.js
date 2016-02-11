@@ -45,6 +45,7 @@ module.exports = function (app, express) {
 // CREATE NEW USER OR RESPOND WITH USER & TRIP DATA
 	app.post('/user/:user_id', function (req, res) {
 		console.log('Hitting endpoint: ', req.url);
+		console.log('req-body:', req.body);
 		UserMethods.findOrCreateUser(req.body, res);
 	});
 
@@ -61,7 +62,7 @@ module.exports = function (app, express) {
   });
 
   app.delete('/user/:user_id/contacts', function (req, res) {
-  	console.log('Hitting endpoint: ', req.url);
+  		console.log('Hitting endpoint: ', req.url);
   		UserMethods.removeContact(req.params.user_id, req.body.id, res);
   });
 

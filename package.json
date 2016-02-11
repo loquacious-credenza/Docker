@@ -17,6 +17,14 @@
     "test": "test",
     "start": "nodemon Server/server.js"
   },
-  "author": "Max O'Connell",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loquacious-credenza/Docker.git"
+  },
+  "author": "Max OConnell",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loquacious-credenza/Lantern/issues"
+  },
+  "homepage": "https://github.com/loquacious-credenza/Lantern#readme"
 }

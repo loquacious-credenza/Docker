@@ -1,7 +1,7 @@
 var express = require('express');
 var Mongo = require('./Database/Db.js');
 var app = express();
-var port = 8000;
+var port = process.env.PORT || 8000;
 
 
 // AUTHENTICATION & MIDDLEWARE TO BE DECLARED IN 'config.js'

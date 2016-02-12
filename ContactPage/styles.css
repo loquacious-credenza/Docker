@@ -1,6 +1,14 @@
+body {
+	font-family: helvetica;
+	background-color: #4489CB;
+	font-weight: 100;
+}
+
 h2 {
+	margin-top: 25px;
+	font-family: helvetica;
+	font-weight: 100;
 	font-size:25px;
-	font-family: sans-serif;
 }
 
 .main-container {
@@ -8,6 +16,16 @@ h2 {
 	border-radius: 3px;
 	background-color: #eee;
 	padding: 0px;
+}
+
+.infomessage {
+	margin: 20px;
+	line-height: 150%;
+}
+
+a {
+	margin-top: 40px;
+	margin-left: 30%;
 }
 
 .user-information-form {
@@ -18,6 +36,22 @@ h2 {
 	list-style: none;
 	background-color: #fff;
 	border-radius: 3px;
+}
+
+.linkbutton {
+	display: block;
+    width: 250px;
+    height: 35px;
+    background: #4489CB;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.linkbutton:hover {
+	color: white;
+	text-decoration: none;
+	background-color: #66ABED;
 }
 
 #map {

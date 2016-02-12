@@ -87,7 +87,7 @@ var updateUserData = function (targetUrl) {
 // TRIP DATA FROM THE SERVER. IT ALSO PROVIDES A LINK FOR LIVE VIDEO FEED.
 var parseUrl = function (url) {
 	var parsedUrl = url.split('contact/');
-  	var videoUrl = $('#videoLink').attr('href') + parsedUrl[1].split('/')[0];
+  	var videoUrl = $('#videoLink').attr('src') + parsedUrl[1].split('/')[0];
   	console.log('video url is: ', videoUrl);
 	parsedUrl = parsedUrl[0] + 'userpath/' + parsedUrl[1];
   	$('#videoLink').attr('src', videoUrl);

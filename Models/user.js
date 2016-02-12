@@ -5,7 +5,7 @@ var TripSchema = require('./trip.js').schema;
 var UserSchema = new mongoose.Schema({
 	_id: String,
 	name: String,
-  password: String,
+  	password: String,
 	phone: Number,
 	delay: {type: Number, default:30},
 	contacts: [ContactSchema],

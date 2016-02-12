@@ -23,7 +23,6 @@ module.exports = {
 	// IF THE USER IS NOT INITIALLY FOUND, 'user' IS CREATED IN THE DATABASE USING 'userObj' AND THEN RETURNED. IN THIS CASE, 'activeTrip'
 	// DEFAULTS TO 'null'.
 	findOrCreateUser: function (userObj, res) {
-		console.log("Find or create user called.", userObj);
 		var combinedData = {};
 		User.findById(userObj._id, function (err, response) {
 			if (err) {

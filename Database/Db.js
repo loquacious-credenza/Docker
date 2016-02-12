@@ -3,6 +3,6 @@ var Mongo = require('../ApiKeys/mongolab.js');
 var env = process.env.NODE_ENV;
 
 console.log('Mongo: ', Mongo.MONGO_URL);
-mongoose.connect(Mongo.MONGO_URL);
+var db = mongoose.connect(Mongo.MONGO_URL);
 
-module.exports = mongoose;
+module.exports = db;

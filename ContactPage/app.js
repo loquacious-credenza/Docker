@@ -22,9 +22,7 @@ var renderLocationsToMap = function (map, data) {
 	var points = [];
 	var path;
 	var destination;
-	console.log('rendering location: ', data);
 	for (var i = 0; i < data.path.length; i++) {
-		console.log('Longitude:', data.path[i].location.coordinates[0])
 		points.push(new google.maps.LatLng(data.path[i].location.coordinates[1], data.path[i].location.coordinates[0]));
 	};
 
@@ -90,9 +88,10 @@ var updateUserData = function (targetUrl) {
 var parseUrl = function (url) {
 	var parsedUrl = url.split('contact/');
   	var videoUrl = $('#videoLink').attr('href') + parsedUrl[1].split('/')[0];
-
+  	console.log('video url is: ', videoUrl);
 	parsedUrl = parsedUrl[0] + 'userpath/' + parsedUrl[1];
-  	$('#videoLink').attr('href', videoUrl);
+  	$('#videoLink').attr('src', videoUrl);
+  	$('#linkButton').attr('href', videoUrl);
 	return parsedUrl;
 };
 

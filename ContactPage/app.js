@@ -96,6 +96,7 @@ $(document).ready(function () {
 	var url = parseUrl($(location).attr('href'));
 	updateUserData(url);
 	url = url.slice(0,(url.length - 5));
+	console.log('url is now: ', url);
 	updateLocationData(map, url);
 	setTimeout(function () {
 		updateLocationData(map, url);

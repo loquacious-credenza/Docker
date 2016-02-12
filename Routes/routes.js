@@ -74,7 +74,7 @@ module.exports = function (app, express) {
 
 	app.get('/userpath/:user_id/:trip_id/user', function (req, res) {
 		console.log('Hitting endpoint: ', req.url);
-		UserMethods.findUser(req.params.user_id, res);
+		UserMethods.findUser(req.params.user_id, res, true);
 	});
 }
 

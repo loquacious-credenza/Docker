@@ -6,15 +6,23 @@ var User = require('../Models/user.js');
 var Trip = require('../Models/trip.js');
 
 module.exports = {
-	//FINDS 'user' BY ID AND RETURNS JSON.
-	findUser: function (id, res) {
+	//FINDS 'user' BY ID AND RETURNS JSON. IF 'removePrivateData' IS PASSED IN AS 'true', THE FUNCTION WILL REMOVE
+	// PRIVATE INFORMATION BEFORE RESPONDING.
+	findUser: function (id, res, removePrivateData) {
 		User.findById(id, function (err, response) {
 			if (err) {
 				console.log("Error finding user: ", err);
 				res.sendStatus(500);
 			} else {
 				console.log("User found: ", response);
-				res.json(response);
+				if (removePrivateData) {
+					delete response.contacts;
+					delete response.trips;
+					delete response.password;
+					res.json(response);
+				} else {
+					res.json(response);
+				}
 			}
 		});
 	},

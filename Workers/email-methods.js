@@ -14,7 +14,7 @@ module.exports = function (user, trip) {
 		var message = 'Hello, this is an automated message for ' + contact.contact_name + ' from Lantern '
 		+ 'on behalf of ' + user.name + '. ' + user.name + ' was scheduled to arrive at ' + trip.overdue_time
 		+ ' but failed to check in on time. Please consider contacting ' + user.name + ' at ' + user.phone + '\n'
-		+ ' Visit http://localhost:8000/contact/' + trip.user_id + '/' + trip._id + ' for details.';
+		+ ' Visit https://lantern37.herokuapp.com/contact/' + trip.user_id + '/' + trip._id + ' for details.';
 		var mailOptions = {
 			from: 'Lantern Project <laudatoryflannel@gmail.com>',
 			to: contact.contact_email,

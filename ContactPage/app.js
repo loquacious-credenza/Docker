@@ -17,7 +17,7 @@ var renderLocationsToMap = function (map, data) {
 	var points = [];
 	var path;
 	var destination;
-	console.log(data);
+	console.log('rendering location: ', data);
 	for (var i = 0; i < data.path.length; i++) {
 		console.log('Longitude:', data.path[i].location.coordinates[0])
 		points.push(new google.maps.LatLng(data.path[i].location.coordinates[1], data.path[i].location.coordinates[0]));
@@ -43,7 +43,6 @@ var renderLocationsToMap = function (map, data) {
 };
 
 var renderUserToPage = function (data) {
-	console.log(data);
 	$('#user-name').html(data.name);
 	$('#user-phone').html(data.phone);
 };
@@ -96,7 +95,6 @@ $(document).ready(function () {
 	var map = initializeMap();
 	var url = parseUrl($(location).attr('href'));
 	updateUserData(url);
-	console.log('url is now: ', url);
 	updateLocationData(map, url);
 	setTimeout(function () {
 		updateLocationData(map, url);

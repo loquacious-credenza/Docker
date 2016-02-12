@@ -67,7 +67,7 @@ module.exports = function (app, express) {
   });
 
 /* ================ CONTACT ENDPOINTS ================= */
-	app.get('/userpath/:user_id/:trip_id', function (req, res) {
+	app.get('/userpath/:user_id/:trip_id/', function (req, res) {
 		console.log('Hitting endpoint: ', req.url);
 		TripMethods.readContactPage(req, res);
 	});

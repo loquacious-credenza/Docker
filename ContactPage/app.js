@@ -10,6 +10,11 @@ var initializeMap = function () {
 	});
 }
 
+// THIS FUNCTION 
+var openIframe = function() {
+
+}
+
 // THIS FUNCTION TAKES THE TRIP OBJECT PROVIDED BY THE SERVER AND PULLS OUT THE 'path' & 'destination' KEY/VALUES AND RENDERS THEM
 // ONTO THE MAP. CURRENTLY IT WILL RE-RENDER ALL OF THE POINTS PROVIDED WITHOUT DISCERNING IF THEY ARE ALREADY PRESENT ON THE MAP
 // OR NOT. OBVIOUSLY, THIS ISN'T IDEAL. CONSIDER REFACTORING LATER.
@@ -42,6 +47,7 @@ var renderLocationsToMap = function (map, data) {
 	}
 };
 
+// SETS THE TEXT OF THESE ELEMENTS TO THE DATA RECIEVED FROM THE SERVER.
 var renderUserToPage = function (data) {
 	$('#user-name').html(data.name);
 	$('#user-phone').html(data.phone);

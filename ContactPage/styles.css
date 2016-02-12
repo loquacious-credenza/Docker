@@ -5,7 +5,9 @@ body {
 }
 
 h2 {
+	display: inline-block;
 	margin-top: 25px;
+	margin-left: 20px;
 	font-family: helvetica;
 	font-weight: 100;
 	font-size:25px;
@@ -19,7 +21,7 @@ h2 {
 }
 
 .infomessage {
-	margin: 20px;
+	margin: 15px 20px;
 	line-height: 150%;
 }
 
@@ -58,4 +60,20 @@ a {
 	border: solid 1px black;
 	height: 500px;
 }
+
+#videoLink {
+	background-color: white;
+	margin-top: 15px;
+	margin-left: 26%;
+	height: 200px;
+	width: 300px;
+	/*display: none;*/
+}
+
+
+
+
+
+
+
 

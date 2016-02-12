@@ -20,6 +20,6 @@ var locPointSchema = new Schema({
   noId: true
 });
 
-locPointSchema.index({ location: '2dsphere'});
+//locPointSchema.index({ location: '2dsphere'});
 
 module.exports = mongoose.model('LocPoint', locPointSchema);

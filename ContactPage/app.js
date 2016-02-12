@@ -83,10 +83,10 @@ var updateUserData = function (targetUrl) {
 // TRIP DATA FROM THE SERVER. IT ALSO PROVIDES A LINK FOR LIVE VIDEO FEED.
 var parseUrl = function (url) {
 	var parsedUrl = url.split('userpath/');
-  var videoUrl = $('#videoLink').attr('href') + parsedUrl[1].split('/')[0];
+  	var videoUrl = $('#videoLink').attr('href') + parsedUrl[1].split('/')[0];
 
 	parsedUrl = parsedUrl[0] + 'userpath/' + parsedUrl[1];
-  $('#videoLink').attr('href', videoUrl);
+  	$('#videoLink').attr('href', videoUrl);
 	return parsedUrl;
 };
 
@@ -95,6 +95,7 @@ $(document).ready(function () {
 	var map = initializeMap();
 	var url = parseUrl($(location).attr('href'));
 	updateUserData(url);
+	url = url.slice(0,(url.length - 5));
 	updateLocationData(map, url);
 	setTimeout(function () {
 		updateLocationData(map, url);

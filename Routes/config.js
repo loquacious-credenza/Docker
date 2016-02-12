@@ -5,7 +5,7 @@ var path = require('path');
 var messageWorker = require('../Workers/message-worker.js');
 
 module.exports = function (app, express) {
-	app.use('/userpath/:user_id/:trip_id', express.static(path.join(__dirname, '/../ContactPage')));
+	app.use('/contact/:user_id/:trip_id', express.static(path.join(__dirname, '/../ContactPage')));
 	app.use(bodyParser.json());
 
 }

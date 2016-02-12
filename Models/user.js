@@ -1,4 +1,4 @@
-var mongoose = require('mongoose');
+var mongoose = require('../Database/Db.js');
 var ContactSchema = require('./contact.js').schema;
 var TripSchema = require('./trip.js').schema;
 

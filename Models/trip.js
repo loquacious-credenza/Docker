@@ -1,6 +1,6 @@
 'use strict';
 
-var mongoose = require('mongoose');
+var mongoose = require('../Database/Db.js');
 var Schema = mongoose.Schema;
 
 var VideoModel = require('./video').schema;

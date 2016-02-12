@@ -1,4 +1,4 @@
-var mongoose = require('mongoose');
+var mongoose = require('../Database/Db.js');
 
 var ContactSchema = new mongoose.Schema({
 	contact_name: String,

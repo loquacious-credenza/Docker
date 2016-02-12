@@ -82,7 +82,7 @@ var updateUserData = function (targetUrl) {
 // PARSES OUT THE RELEVANT PARAMETERS IN THE ORIGINAL LINKS' URL AND ATTACHES THEM TO 'parsedUrl'. THIS NEW URL IS THEN USED FOR REQUESTING
 // TRIP DATA FROM THE SERVER. IT ALSO PROVIDES A LINK FOR LIVE VIDEO FEED.
 var parseUrl = function (url) {
-	var parsedUrl = url.split('userpath/');
+	var parsedUrl = url.split('contact/');
   	var videoUrl = $('#videoLink').attr('href') + parsedUrl[1].split('/')[0];
 
 	parsedUrl = parsedUrl[0] + 'userpath/' + parsedUrl[1];

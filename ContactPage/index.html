@@ -17,13 +17,17 @@
 			<div class="col-md-6" id="map">
 				Error: Cannot load map API
 			</div>
-			<div class="col-md-6 userdata">
+			<div class="col-md-3 userdata">
 					<h2>Hello,</h2>
 				<p class="infomessage">
-					This message has been sent to you on behalf of <span id="user-name">(loading)</span>. This page is part of the Lantern automated notification system. <span id="user-name">(loading)</span> failed to check in to their selected destination on time. Please consider checking in with them. Click the link below to open a live video chat session.
+					This message has been sent to you on behalf of <span class="user-name">(loading)</span>. This page is part of the Lantern automated notification system. <span class="user-name">(loading)</span> failed to check in to their selected destination on time. Please consider checking in with them. Click the link below to open a live video chat session.
 				</p>
-        		<a target="_blank" id="linkButton" href="https://lantern-app-test.herokuapp.com/">Click to open live video feed.</a>
-        		<iframe id="videoLink" src="https://lantern-app-test.herokuapp.com/">Error opening iframe.</iframe>
+        		<span target="_blank" id="linkButton">Click to open live video feed.</span>
+			</div>
+			<div class="col-md-3">
+				<div id="videoContainer">
+        			<iframe id="videoLink" src="https://lantern-app-test.herokuapp.com/">Error opening iframe.</iframe>
+				</div>
 			</div>
 		</div>
 	</div>

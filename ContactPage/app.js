@@ -8,12 +8,19 @@ var initializeMap = function () {
 		minZoom:1,
 		maxZoom:100
 	});
-}
+};
 
 // THIS FUNCTION 
 var openIframe = function() {
-
-}
+	console.log('CALLED!');
+	if ( $('#videoLink').css("display") === 'none' ) {
+		$('#videoLink').css("display","block");
+		$('#linkButton').html("Click to close live video feed.");	
+	} else {
+		$('#videoLink').css("display","none");
+		$('#linkButton').html("Click to open live video feed.");	
+	}
+};
 
 // THIS FUNCTION TAKES THE TRIP OBJECT PROVIDED BY THE SERVER AND PULLS OUT THE 'path' & 'destination' KEY/VALUES AND RENDERS THEM
 // ONTO THE MAP. CURRENTLY IT WILL RE-RENDER ALL OF THE POINTS PROVIDED WITHOUT DISCERNING IF THEY ARE ALREADY PRESENT ON THE MAP
@@ -47,8 +54,7 @@ var renderLocationsToMap = function (map, data) {
 
 // SETS THE TEXT OF THESE ELEMENTS TO THE DATA RECIEVED FROM THE SERVER.
 var renderUserToPage = function (data) {
-	$('#user-name').html(data.name);
-	$('#user-phone').html(data.phone);
+	$('.user-name').html(data.name);
 };
 
 // THIS FUNCTION MAKES A GET REQUEST TO THE SERVER EVERY 20 SECONDS, PROVIDING 'user_id' and 'trip_id' IN THE URL.
@@ -97,6 +103,11 @@ var parseUrl = function (url) {
 
 // WHEN THE PAGE FINISHES LOADING, 'updateLocationData' WILL BE SCHEDULED TO RUN EVERY 20 SECONDS WITH 'setTimeout'
 $(document).ready(function () {
+
+	$('#linkButton').on('click', function() {
+		openIframe();
+	});
+
 	var map = initializeMap();
 	var url = parseUrl($(location).attr('href'));
 	updateUserData(url);
@@ -104,6 +115,7 @@ $(document).ready(function () {
 	setTimeout(function () {
 		updateLocationData(map, url);
 	}, 20000);
+
 });
 
 

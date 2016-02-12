@@ -25,9 +25,8 @@ h2 {
 	line-height: 150%;
 }
 
-a {
-	margin-top: 40px;
-	margin-left: 30%;
+.userdata {
+	padding-left: 25px;
 }
 
 .user-information-form {
@@ -40,7 +39,9 @@ a {
 	border-radius: 3px;
 }
 
-.linkbutton {
+#linkButton {
+	margin-top: 40px;
+	margin-left: 10%;
 	display: block;
     width: 250px;
     height: 35px;
@@ -50,10 +51,11 @@ a {
     color: white;
 }
 
-.linkbutton:hover {
+#linkButton:hover {
 	color: white;
 	text-decoration: none;
 	background-color: #66ABED;
+	cursor: pointer;
 }
 
 #map {
@@ -61,13 +63,26 @@ a {
 	height: 500px;
 }
 
-#videoLink {
+#videoContainer {
+	margin-top: 10px;
+	margin-left: 20px;
+	background-image: url('Assets/logo.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 480px;
+	width: 270px;
 	background-color: white;
-	margin-top: 15px;
-	margin-left: 26%;
-	height: 200px;
-	width: 300px;
-	/*display: none;*/
+	padding: 0px;
+	border: solid 3px #eee;
+}
+
+#videoLink {
+	/*margin-left: 25px;
+	margin: 15px;*/
+	margin:0px;
+	height: 480px;
+	width: 270px;
+	display: none;
 }
 
 

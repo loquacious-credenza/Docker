@@ -51,6 +51,7 @@ var renderUserToPage = function (data) {
 // THIS FUNCTION MAKES A GET REQUEST TO THE SERVER EVERY 20 SECONDS, PROVIDING 'user_id' and 'trip_id' IN THE URL.
 // IT THEN PASSES THE RESULTING DATA ALONG TO 'renderLocations'.
 var updateLocationData = function (map, targetUrl) {
+	console.log('targetUrl:', targetUrl);
 	$.ajax({
 		url: targetUrl,
 		type: 'GET',
@@ -95,7 +96,6 @@ $(document).ready(function () {
 	var map = initializeMap();
 	var url = parseUrl($(location).attr('href'));
 	updateUserData(url);
-	url = url.slice(0,(url.length - 5));
 	console.log('url is now: ', url);
 	updateLocationData(map, url);
 	setTimeout(function () {
